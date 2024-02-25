@@ -36,9 +36,9 @@ jobs:
       # - name: publihs image to docker hub
       #   run: docker push tarun1998/find-dental:latest
   deploy:
+    needs:
+      - build
     runs-on: ubuntu-latest
-    depends_on:
-      - test
     steps:
       - name: Login to AWS
         uses: aws-actions/configure-aws-credentials@v4
