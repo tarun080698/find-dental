@@ -28,7 +28,7 @@ jobs:
           context: ./client
           push: true
           tags: index.docker.io/${{ secrets.DOCKER_USERNAME }}/find-dental:${{ github.sha }}
-          file: ./client/Dockerfile
+          # file: ./client/Dockerfile
 
       # - name: build docker image
       #   run: docker build -t tarun1998/find-dental .
