@@ -37,6 +37,8 @@ jobs:
       #   run: docker push tarun1998/find-dental:latest
   deploy:
     runs-on: ubuntu-latest
+    depends_on:
+      - test
     steps:
       - name: Login to AWS
         uses: aws-actions/configure-aws-credentials@v4
